@@ -15,7 +15,7 @@ for line in sys.stdin:
     thisKey, disk = data_mapped
 
     if oldKey and oldKey != thisKey:
-        print oldKey, ",", total_disk
+        print "{0},{1}".format(oldKey, total_disk)
         oldKey = thisKey;
         total_disk = 0
 
@@ -23,5 +23,5 @@ for line in sys.stdin:
     total_disk += int(disk)
 
 if oldKey != None:
-    print oldKey,",", total_disk
+    print "{0},{1}".format(oldKey, total_disk)
 

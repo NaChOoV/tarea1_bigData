@@ -11,7 +11,7 @@ for line in sys.stdin:
     thisKey, thisFail = data_mapped
 
     if oldKey and oldKey != thisKey:
-        print oldKey, ",", failTotal
+        print "{0},{1}".format(oldKey, failTotal)
         oldKey = thisKey;
         failTotal = 0
 
@@ -19,5 +19,5 @@ for line in sys.stdin:
     failTotal += float(thisFail)
 
 if oldKey != None:
-    print oldKey, ",", failTotal
+    print "{0},{1}".format(oldKey, failTotal)
 
